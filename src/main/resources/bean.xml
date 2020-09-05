@@ -9,4 +9,9 @@
         <property name="bname" value="swq"></property>
         <property name="bauthor" value="this is swq"></property>
     </bean>
+
+    <bean class="com.swq.bean.Orders" id="orders" scope="singleton">
+        <constructor-arg name="address" value="上海市"></constructor-arg>
+        <constructor-arg name="oname" value="swq"></constructor-arg>
+    </bean>
 </beans>
