@@ -3,14 +3,18 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="com.swq.bean.User" id="user" scope="singleton"></bean>
+    <bean class="com.swq.test.User" id="user" scope="singleton"></bean>
 
-    <bean class="com.swq.bean.Book" id="book" scope="singleton">
+    <bean class="com.swq.test.Book" id="book" scope="singleton">
         <property name="bname" value="swq"></property>
-        <property name="bauthor" value="this is swq"></property>
+<!--        <property name="bauthor" value="this is swq"></property>-->
+
+        <property name="bauthor">
+            <null></null>
+        </property>
     </bean>
 
-    <bean class="com.swq.bean.Orders" id="orders" scope="singleton">
+    <bean class="com.swq.test.Orders" id="orders" scope="singleton">
         <constructor-arg name="address" value="上海市"></constructor-arg>
         <constructor-arg name="oname" value="swq"></constructor-arg>
     </bean>

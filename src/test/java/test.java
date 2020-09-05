@@ -1,11 +1,11 @@
-import com.swq.bean.Book;
-import com.swq.bean.Orders;
-import com.swq.bean.User;
+import com.swq.dao.emp;
+import com.swq.dao.emp2;
+import com.swq.test.Book;
+import com.swq.test.Orders;
+import com.swq.test.User;
 import org.junit.Test;
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.core.annotation.Order;
 
 public class test {
     @Test
@@ -35,6 +35,19 @@ public class test {
         Orders orders = (Orders) context.getBean("orders");
         System.out.println(orders);
 
+    }
+
+    @Test
+    public void test05(){
+        ClassPathXmlApplicationContext  context = new ClassPathXmlApplicationContext("bean2.xml");
+        emp emp = (emp) context.getBean("emp");
+        System.out.println(emp.toString());
+    }
+    @Test
+    public void test06(){
+        ClassPathXmlApplicationContext  context = new ClassPathXmlApplicationContext("bean2.xml");
+        emp2 emp2 = (emp2) context.getBean("emp2");
+        System.out.println(emp2.toString());
     }
 
 }

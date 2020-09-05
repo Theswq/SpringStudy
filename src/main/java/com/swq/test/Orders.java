@@ -1,4 +1,4 @@
-package com.swq.bean;
+package com.swq.test;
 
 public class Orders {
 

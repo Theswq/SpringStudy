@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--级联赋值 1-->
+    <bean class="com.swq.dao.dept" id="dept">
+        <property name="dname" value="市民云"></property>
+    </bean>
+
+    <bean class="com.swq.dao.emp" id="emp">
+        <property name="name" value="swq"></property>
+        <property name="gender" value="m"></property>
+        <property name="dept" ref="dept"></property>
+    </bean>
+
+
+<!--级联赋值2    -->
+    <bean class="com.swq.dao.emp2" id="emp2">
+        <property name="name" value="swq"></property>
+        <property name="gender" value="m"></property>
+        <property name="dept" ref="dept"></property>
+        <property name="dept.dname" value="随身市民云"></property>
+    </bean>
+
+<!--    <bean class="com.swq.dao.dept" id="dept2">-->
+<!--        <property name="dname" value="看看dept会变吗"></property>            //这个优先级没有上面的高-->
+<!--    </bean>-->
+
+
+</beans>
