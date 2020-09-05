@@ -1,5 +1,6 @@
 import com.swq.dao.emp;
 import com.swq.dao.emp2;
+import com.swq.dao2.stu;
 import com.swq.test.Book;
 import com.swq.test.Orders;
 import com.swq.test.User;
@@ -49,5 +50,21 @@ public class test {
         emp2 emp2 = (emp2) context.getBean("emp2");
         System.out.println(emp2.toString());
     }
+    @Test
+    public void test07(){
+        ClassPathXmlApplicationContext  context = new ClassPathXmlApplicationContext("properties.xml");
+        stu stu = (stu) context.getBean("stu");
+        System.out.println(stu.toString());
 
+
+    }
+
+    @Test
+    public void test08(){
+        ClassPathXmlApplicationContext  context = new ClassPathXmlApplicationContext("annotation.xml");
+        com.swq.annnotation.User user = (com.swq.annnotation.User) context.getBean("user");
+        user.add();
+
+
+    }
 }
