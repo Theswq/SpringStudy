@@ -23,9 +23,5 @@
         <property name="dept.dname" value="随身市民云"></property>
     </bean>
 
-<!--    <bean class="com.swq.dao.dept" id="dept2">-->
-<!--        <property name="dname" value="看看dept会变吗"></property>            //这个优先级没有上面的高-->
-<!--    </bean>-->
-
 
 </beans>
