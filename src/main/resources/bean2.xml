@@ -21,7 +21,9 @@
         <property name="gender" value="m"></property>
         <property name="dept" ref="dept"></property>
         <property name="dept.dname" value="随身市民云"></property>
-    </bean>
+
+<!--dept要添加get方法-->
+  </bean>
 
 
 </beans>
