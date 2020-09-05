@@ -1,3 +1,4 @@
+import com.swq.bean.Book;
 import com.swq.bean.User;
 import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;
@@ -19,4 +20,12 @@ public class test {
         user.add();
 
     }
+    @Test
+    public void test03(){
+        ClassPathXmlApplicationContext  context = new ClassPathXmlApplicationContext("bean.xml");
+        Book book = (Book) context.getBean("book");
+        System.out.println(book);
+
+    }
+
 }

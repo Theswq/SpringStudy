@@ -4,4 +4,9 @@
    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean class="com.swq.bean.User" id="user" scope="singleton"></bean>
+
+    <bean class="com.swq.bean.Book" id="book" scope="singleton">
+        <property name="bname" value="swq"></property>
+        <property name="bauthor" value="this is swq"></property>
+    </bean>
 </beans>
