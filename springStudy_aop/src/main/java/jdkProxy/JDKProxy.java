@@ -15,7 +15,7 @@ public class JDKProxy {
 //        int result = dao.add(1,2);
 //        System.out.println("result"+ result);
 
-        String swq = dao.update("swq");
+        String swq = dao.update("com.swq");
         System.out.println(swq);
     }
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.swq.test.User" id="user" scope="singleton"></bean>
+
+    <bean class="com.swq.test.Book" id="book" scope="singleton">
+        <property name="bname" value="com.swq"></property>
+<!--        <property name="bauthor" value="this is com.swq"></property>-->
+
+        <property name="bauthor">
+            <null></null>
+        </property>
+    </bean>
+
+    <bean class="com.swq.test.Orders" id="orders" scope="singleton">
+        <constructor-arg name="address" value="上海市"></constructor-arg>
+        <constructor-arg name="oname" value="com.swq"></constructor-arg>
+    </bean>
+</beans>

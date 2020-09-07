@@ -25,7 +25,10 @@
         </plugins>
     </build>
     <modules>
-        <module>springStudy_annnotation</module>
+
+        <module>springStudy_DI</module>
+        <module>springStudy_AOP</module>
+        <module>springStudy_annotation</module>
     </modules>
 
 
@@ -35,6 +38,12 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
